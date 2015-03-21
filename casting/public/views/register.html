@@ -1,0 +1,27 @@
+<div class="register" ng-controller="RegisterCtrl">
+	<form name="registerForm" ng-submit="register()" novalidate>
+		<h1>Register</h1>
+		<input type="text" name="user.fname" placeholder="First Name" autofocus 
+			ng-model="fname" ng-required="true"><br>
+		<p class="error" 
+			ng-show="registerForm.fname.$invalid && registerForm.fname.$touched">Please enter your first name</p>
+
+		<input type="text" name="user.lname" placeholder="Last Name" autofocus 
+			ng-model="lname" ng-required="true"><br>
+		<p class="error" 
+			ng-show="registerForm.lname.$invalid && registerForm.fname.$touched">Please enter your last name</p>
+
+		<input type="email" name="user.email" placeholder="Email" autofocus 
+			ng-model="email" ng-required="true"><br>
+		<p class="error" 
+			ng-show="registerForm.email.$invalid && registerForm.email.$touched">Must be a valid email</p>
+
+		<input type="password" name="user.password" placeholder="Password" 
+			ng-model="password"><br>
+		<p class="error" 
+			ng-show="registerForm.password.$invalid && registerForm.password.$touched">Please enter a valid password</p>
+
+		<button class="btn btn-success btn-lg" 
+			ng-disabled="registerForm.$invalid">Submit</button>
+	</form>
+</div>

@@ -1,0 +1,131 @@
+$slabo 							: 'Slabo 27px', serif
+$oxygen 						: 'Oxygen', sans-serif;
+$lora 							: 'Lora', serif
+
+$dark 							: #24221F
+$green 							: #505908
+$blue 							: #23425E
+$lime 							: #A2A638
+$beige 							: #A69E8F
+$white 							: #fff
+$white-drk						: #e5e5e5
+
+html, body
+	height: 100%
+body 
+	font-size 					: 12pt
+	font-family 				: $lora
+h1
+	font-family 				: $slabo
+h2, h3, h4
+	font-family 				: $oxygen
+h5 
+	font-weight 				: 700
+
+.inline-list 
+	list-style-type 			: none
+	padding 					: 0
+
+nav 
+	position 					: fixed !important
+	z-index 					: 3
+	padding 					: 0 !important
+	background-color 			: $dark 
+	color 						: $white
+	height 						: 100%
+	-webkit-box-shadow 			: 0px 0px 5px 0px rgba(0,0,0,1)
+	-moz-box-shadow 			: 0px 0px 5px 0px rgba(0,0,0,1)
+	box-shadow 					: 0px 0px 5px 0px rgba(0,0,0,1)
+	a 
+		display 				: block
+		width 					: 100%
+		color 					: $white-drk
+		padding 				: 30px 10px
+		font-size 				: 16pt
+		&:hover 
+			color 				: #fff
+			background-color 	: $green
+		&:focus 
+			color 				: #fff
+.wrapper
+	position 					: relative !important
+	h1 
+		border-bottom 			: 1px solid $white-drk
+		margin-bottom: 0
+		a 
+			&:hover
+				text-decoration : none
+	aside 
+		padding: 10px
+		border-left: 1px solid $white-drk
+		border-right: 1px solid $white-drk
+		border-bottom: 1px solid $white-drk
+		#chat
+			height 				: 500px
+			overflow 			: auto
+			ul 
+				list-style-type 	: none
+				padding 			: 0
+				li 
+					clear 			: both
+					overflow 		: hidden
+				span
+					float 			: left
+					width 			: 90%
+					font-size: 10pt
+					h3 
+						font-size: 12pt
+						color: $blue
+						margin-bottom: 0
+				button 
+					float 			: right
+					width 			: 6%
+					margin 			: 0 2%
+					border 			: 0
+					background-color: transparent
+					padding 		: 0
+					color 			: $white-drk
+		textarea 
+			resize 					: none
+
+form.application
+	.form-group
+		padding: 10px 0
+		margin: 0
+		overflow: hidden
+		label
+			padding: 0
+			font-family: $oxygen
+			color: $blue
+	h2 
+		font-size: 16pt
+		padding: 0
+	.personal-info
+		padding-left: 0
+		padding-top: 15px
+		input
+			border: 0
+			border-bottom: 1px solid #e5e5e5
+			box-shadow: none
+			&:focus
+				background-color: #F7F5F5
+				border-bottom: 1px solid #F7F5F5
+				transition: background-color 0.5s ease;
+	.experience
+		padding-left: 0
+		padding-top: 15px
+		textarea
+			resize: none
+			border: 0
+			border-bottom: 1px solid #e5e5e5
+			box-shadow: none
+			height: 120px
+			&:focus
+				background-color: #F7F5F5
+				border-bottom: 1px solid #F7F5F5
+				transition: background-color 0.25s ease;
+			
+
+
+
+

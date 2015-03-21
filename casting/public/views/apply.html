@@ -1,0 +1,110 @@
+<h1 class="col-xs-12">Tell Us About Yourself</h1>
+	<div ng-controller="ApplyCtrl" class="col-xs-12">
+		<form class="application" name="applicationForm" ng-submit="apply()" novalidate>
+			<fieldset>
+				<h2 class="col-xs-3">General Information</h2>
+				<div class="col-xs-9 personal-info">
+					<div class="form-group">
+						<label for="name" class="col-xs-2">Full Name</label>
+						<div class="col-xs-10">
+							<input id="name" name="app-name" type="text" class="form-control input-md" ng-model="name" ng-required="true">
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="phone" class="col-xs-2">Phone Number</label>
+						<div class="col-xs-10">
+							<input id="phone" name="app-phone" type="phone" class="form-control input-md" ng-model="phone">
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="email" class="col-xs-2">Email Address</label>
+						<div class="col-xs-10">
+							<input id="email" name="app-email" type="email" class="form-control input-md" ng-model="email">
+							<p class="error" ng-show="applicationForm.email.$invalid && applicationForm.email.$touched">Must be a valid email</p>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="height" class="col-xs-2">Height</label>
+						<div class="col-xs-10">
+							<input id="height" name="app-height" type="text" class="form-control input-md" ng-model="height">
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="weight" class="col-xs-2">Weight</label>
+						<div class="col-xs-10">
+							<input id="weight" name="app-weight" type="text" class="form-control input-md"  ng-model="weight">
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="hair" class="col-xs-2">Hair Color</label>
+						<div class="col-xs-10">
+							<input id="hair" name="app-hair" type="text" class="form-control input-md" ng-model="hair">
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="eyes" class="col-xs-2">Eye Color</label>
+						<div class="col-xs-10">
+							<input id="eyes" name="app-eyes" type="text" class="form-control input-md" ng-model="eye">
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="dob" class="col-xs-2">DOB</label>
+						<div class="col-xs-10">
+							<input id="dob" name="app-dob" type="text" class="form-control input-md" ng-model="dob">
+						</div>
+					</div>
+				</div>
+				<h2 class="col-xs-3">Experience &amp; Skills</h2>
+				<div class="col-xs-9 experience">
+					<div class="form-group">
+						<label for="film" class="col-xs-2">Film</label>
+						<div class="col-xs-10">
+							<textarea id="film" name="app-film" class="form-control" ng-model="film"></textarea>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="tv" class="col-xs-2">Television</label>
+						<div class="col-xs-10">
+							<textarea id="tv" name="app-tv" class="form-control" ng-model="tv"></textarea>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="theatre" class="col-xs-2">Theatre</label>
+						<div class="col-xs-10">
+							<textarea id="theatre" name="app-theatre" class="form-control" ng-model="theatre"></textarea>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="commercial" class="col-xs-2">Commercial</label>
+						<div class="col-xs-10">
+							<textarea id="commercial" name="app-commercial" class="form-control" ng-model="commercial"></textarea>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="education" class="col-xs-2">Education</label>
+						<div class="col-xs-10">
+							<textarea id="education" name="app-education" class="form-control" ng-model="education"></textarea>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="training" class="col-xs-2">Training</label>
+						<div class="col-xs-10">
+							<textarea id="training" name="app-training" class="form-control" ng-model="training"></textarea>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="special-skills" class="col-xs-2">Special Skills</label>
+						<div class="col-xs-10">
+							<textarea id="special-skills" name="app-special-skills" class="form-control" ng-model="skills"></textarea>
+						</div>
+					</div>
+	            </div>
+				<div class="form-group col-xs-12">
+                    <div class="col-md-12 text-right">
+                        <button id="singlebutton" class="btn btn-success btn-lg" ng-disabled="applicationForm.$invalid">Submit</button>
+                    </div>
+                </div>
+            </fieldset>
+		</form>
+		</div>
+	</div>
