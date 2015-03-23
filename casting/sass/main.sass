@@ -55,6 +55,8 @@ nav
 		a 
 			&:hover
 				text-decoration : none
+	.content 
+		padding-left: 0
 	aside 
 		padding: 10px
 		border-left: 1px solid $white-drk
@@ -100,7 +102,7 @@ form.application
 	h2 
 		font-size: 16pt
 		padding: 0
-	.personal-info
+	.headshot, .personal-info, .experience
 		padding-left: 0
 		padding-top: 15px
 		input
@@ -110,10 +112,7 @@ form.application
 			&:focus
 				background-color: #F7F5F5
 				border-bottom: 1px solid #F7F5F5
-				transition: background-color 0.5s ease;
-	.experience
-		padding-left: 0
-		padding-top: 15px
+				transition: background-color 0.5s ease
 		textarea
 			resize: none
 			border: 0
@@ -125,7 +124,42 @@ form.application
 				border-bottom: 1px solid #F7F5F5
 				transition: background-color 0.25s ease;
 			
+#applications
+	list-style-type: none
+	padding: 0
+	li[ng-repeat="applicant in applications"]
+		overflow: hidden
+		margin: 10px 0
+		border: 1px solid $white-drk
+		padding: 10px
+		-webkit-box-shadow: 2px 2px 5px 0px rgba(229,229,229,1)
+		-moz-box-shadow: 2px 2px 5px 0px rgba(229,229,229,1)
+		box-shadow: 2px 2px 5px 0px rgba(229,229,229,1)
+		.details
+			h3 
+				margin: 0 0 5px 0 
+			ul 
+				list-style-type: none
+				padding: 0
 
-
-
+.login, .register
+	form 
+		padding: 0
+		margin: 20px 0
+		.form-group
+			padding: 0
+			overflow: hidden
+			input
+				border: 0
+				border-bottom: 1px solid #e5e5e5
+				box-shadow: none
+				&:focus
+					background-color: #F7F5F5
+					border-bottom: 1px solid #F7F5F5
+					transition: background-color 0.5s ease
+			p.error 
+				color: rgb(203, 0, 0)
+		button 
+			float: right
+			margin: 0 15px
 

@@ -1,27 +1,34 @@
 <h1 class="col-xs-12"><a href="/">Casting</a></h1>
 <div class="col-xs-12">
+	<div class="userInfo" ng-controller="StatusCtrl" ng-show="userEmail">
+		<span class="user">Hi {{ userEmail }}</span>
+	</div>
 	<div ng-controller="ApplyCtrl" class="col-xs-8 content">
 		<div id="recent-apps">
 			<ul id="applications">
 		      <li ng-repeat="applicant in applications">
-		        
-		        <ul>
-		        	<li><strong>{{ applicant.name }}</strong></li>
-		        	<li><strong>{{ applicant.phone }}</strong></li>
-		        	<li><strong>{{ applicant.email }}</strong></li>
-		        	<li><strong>Height:</strong> {{ applicant.height }}</li>
-		        	<li><strong>Weight:</strong> {{ applicant.name }}</li>
-		        	<li><strong>Hair Color:</strong> {{ applicant.hair }}</li>
-		        	<li><strong>Eye Color:</strong> {{ applicant.eye }}</li>
-		        	<li><strong>DOB:</strong> {{ applicant.dob }}</li>
-		        	<li><strong>Film:</strong> {{ applicant.film }}</li>
-		        	<li><strong>Television:</strong> {{ applicant.tv }}</li>
-		        	<li><strong>Theatre:</strong> {{ applicant.theatre }}</li>
-		        	<li><strong>Commercial:</strong> {{ applicant.commercial }}</li>
-		        	<li><strong>Education:</strong> {{ applicant.education }}</li>
-		        	<li><strong>Training:</strong> {{ applicant.training }}</li>
-		        	<li><strong>Special skills:</strong> {{ applicant.skills }}</li>
-		        </ul>
+		      	<div class="col-xs-3">
+		      		<a href="#/applicant/{{applicant.$id}}"><img src="{{ applicant.image }}" class="img-thumbnail" alt="headshot" width="200"></a>
+		      	</div>
+		      	<div class="col-xs-9 details">
+		      		<h3><a href="#/applicant/{{applicant.$id}}">{{ applicant.name }}</a></h3>
+		      		<ul>
+		      			<li><strong>Phone:</strong> {{ applicant.phone }}</li>
+			        	<li><strong>Email:</strong> {{ applicant.email }}</li>
+			        	<li><strong>Height:</strong> {{ applicant.height }}</li>
+			        	<li><strong>Weight:</strong> {{ applicant.weight }}</li>
+			        	<li><strong>Hair Color:</strong> {{ applicant.hair }}</li>
+			        	<li><strong>Eye Color:</strong> {{ applicant.eye }}</li>
+			        	<li><strong>DOB:</strong> {{ applicant.dob }}</li>
+		      		</ul>
+		      		<!-- <p><strong>Film:</strong> {{ applicant.film }}</p>
+		      		<p><strong>Television:</strong> {{ applicant.tv }}</p>
+		      		<p><strong>Theatre:</strong> {{ applicant.theatre }}</p>
+		      		<p><strong>Commercial:</strong> {{ applicant.commercial }}</p>
+		      		<p><strong>Education:</strong> {{ applicant.education }}</p>
+		      		<p><strong>Training:</strong> {{ applicant.training }}</p>
+		      		<p><strong>Special skills:</strong> {{ applicant.skills }}</p> -->
+		      	</div>
 		        
 		      </li>
 		    </ul>

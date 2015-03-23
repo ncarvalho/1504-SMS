@@ -1,10 +1,25 @@
-<section class="login">
-	<form name="login-form" novalidate>
+<div ng-controller="RegisterCtrl">
+	<section class="login">
 		<h1>Log In</h1>
-		<input type="email" name="email" placeholder="Email" autofocus ng-model="user.email" ng-required="true"><br>
-		<p class="error" ng-show="login-form.email.$invalid && login-form.email.$touched">Must be a valid email</p>
-		<input type="password" name="password" placeholder="Password" ng-model="user.password"><br>
-		<p class="error" ng-show="login-form.password.$invalid && login-form.password.$touched">Please enter a valid password</p>
-		<button type="submit">Log In</button>
-	</form>
-</section>
+		<form name="loginForm" class="col-xs-4" ng-submit="login()" novalidate>
+			<div class="form-group">
+				<label class="col-xs-3">Email</label>
+				<div class="col-xs-9">	
+					<input type="email" name="email" placeholder="Email" class="form-control" autofocus 
+					ng-model="user.email" ng-required="true">
+					<p class="error" ng-show="login-form.email.$invalid && login-form.email.$touched">Must be a valid email</p>
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-xs-3">Password</label>
+				<div class="col-xs-9">	
+					<input type="password" name="password" placeholder="Password" class="form-control" 
+					ng-model="user.password">
+					<p class="error" ng-show="login-form.password.$invalid && login-form.password.$touched">Please enter a valid password</p>
+				</div>
+			</div>
+			<button class="btn btn-success btn-lg" type="submit" 
+				ng-disabled="loginForm.$invalid">Log In</button>
+		</form>
+	</section>
+</div>
