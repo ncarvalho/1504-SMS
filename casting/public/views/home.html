@@ -8,7 +8,9 @@
 			<ul id="applications">
 		      <li ng-repeat="applicant in applications">
 		      	<div class="col-xs-3">
-		      		<a href="#/applicant/{{applicant.$id}}"><img src="{{ applicant.image }}" class="img-thumbnail" alt="headshot" width="200"></a>
+		      		<a href="#/applicant/{{applicant.$id}}">
+		      			<img ng-src="{{ applicant.image }}" fallback-src loading-src class="img-thumbnail userImg" alt="headshot" width="200">
+		      		</a>
 		      	</div>
 		      	<div class="col-xs-9 details">
 		      		<h3><a href="#/applicant/{{applicant.$id}}">{{ applicant.name }}</a></h3>

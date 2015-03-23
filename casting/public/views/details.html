@@ -1,5 +1,5 @@
 <div class="col-xs-3">
-	<img src="{{ currentApplicant.image }}" class="img-thumbnail" alt="headshot" width="400">
+	<img ng-src="{{ currentApplicant.image }}" fallback-src loading-src class="img-thumbnail" alt="headshot" width="400">
 </div>
 <div class="col-xs-9 details">
 	<h3>{{ currentApplicant.name }}</h3>

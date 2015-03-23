@@ -1,5 +1,5 @@
 // set my application to the variable 'app'
-var app = angular.module('casting', ['ngRoute', 'firebase', 'appCtrls']);
+var app = angular.module('casting', ['ngRoute', 'firebase', 'appCtrls', 'dcbImgFallback']);
 var appCtrls = angular.module('appCtrls', []);
 
 // this handles my templates and routes
