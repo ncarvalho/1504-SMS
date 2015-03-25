@@ -12,9 +12,7 @@
 	<script src="libs/angularfire/dist/angularfire.js"></script>
 	<!-- endbower -->
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular-route.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	<script src="js/angular.dcb-img-fallback.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
 	<script src="js/main.min.js"></script>
 	<script src="controllers/app.min.js"></script>
 	<script src="controllers/apply.min.js"></script>
@@ -37,6 +35,8 @@
 	<nav class="col-xs-1" ng-include="'views/nav.html'" ng-controller="StatusCtrl"></nav>
 	<!-- wrapper for the app; contains ng-view -->
 	<div class="wrapper col-xs-11 col-xs-offset-1">
+		<!-- currently displaying the first name of current user -->
+		
 		<!-- this will bring in any templates related to the task at hand -->
 		<main ng-view></main>
 	</div>

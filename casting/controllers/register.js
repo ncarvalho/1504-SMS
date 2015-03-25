@@ -25,7 +25,7 @@ app.controller('RegisterCtrl', ['$scope', '$location', '$firebase', '$firebaseAu
 			// the the id and user info to the db and navigate home
 			$scope.sync.$set(authData.uid, $scope.user);
 
-			$rootScope.currentUser = authData;
+			$rootScope.director = authData;
 			$location.path('/home');
 		}).catch(function(error) {
 			// console.log the error for troubleshooting
@@ -40,7 +40,7 @@ app.controller('RegisterCtrl', ['$scope', '$location', '$firebase', '$firebaseAu
 			email: $scope.user.email,
 			password: $scope.user.password
 		}).then(function(authData) {
-			$rootScope.currentUser = authData;
+			$rootScope.director = authData;
 			$location.path('/home');
 		}).catch(function(error) {
 			// console.log the error for troubleshooting

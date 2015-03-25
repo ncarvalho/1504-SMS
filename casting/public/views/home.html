@@ -1,9 +1,7 @@
-<h1 class="col-xs-12"><a href="/">Casting</a></h1>
+<h1 class="col-xs-12"><a href="/">Casting</a> <span ng-controller="StatusCtrl" ng-show="currentuser" class="user text-muted">Hi {{ currentuser.fname }}</span></h1>
 <div class="col-xs-12">
 	<!-- currently displaying the first name of current user -->
-	<div class="userInfo" ng-controller="StatusCtrl" ng-show="currentuser">
-		<span class="user">Hi {{ currentuser.fname }}</span>
-	</div>
+	
 	<!-- displays the applicants to the current user -->
 	<div ng-controller="ApplyCtrl" class="col-xs-8 content">
 		<div id="recent-apps">

@@ -25,6 +25,9 @@ app.controller('HomeCtrl', ['$scope', '$location', '$firebase', '$firebaseAuth',
 
 	$scope.messages = sync.$asArray();
 	// addmessage function that adds message to array along with its author upon hitting return, then clears the textarea
+	$scope.messages = sync.$asArray();
+	$scope.username = 'Director' + Math.floor(Math.random() * 101);
+
 	$scope.addMessage = function(e) {
 		if(e.keyCode != 13) return;
 		$scope.messages.$add({
