@@ -28,10 +28,14 @@ module.exports = function(grunt){
     		}
   		},
   		minified: {
-  			files: {
+			js: {
 				src: 'js/*.js',
 				dest: 'public/js/'
-  			}, 
+			},
+			controllers: {
+				src: 'controllers/*.js',
+				dest: 'public/controllers/'
+			}, 
   			options: {
   				sourcemap: false,
 			    allinone: false,
@@ -54,8 +58,15 @@ module.exports = function(grunt){
 				files: '**/*.sass',
 				tasks: ['sass']
 			},
-			minified: {
-				files: "js/*.js",
+			js: {
+				files: "js/*.js", 
+				tasks: ["minified"],
+				options: {
+					livereload: true
+				}
+			},
+			controllers: {
+				files: "controllers/*.js", 
 				tasks: ["minified"],
 				options: {
 					livereload: true
