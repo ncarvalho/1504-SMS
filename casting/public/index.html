@@ -33,8 +33,11 @@
 	<link href="css/main.css" rel="stylesheet" type="text/css">
 </head>
 <body>
+	<!-- main nav; will change depending on user status -->
 	<nav class="col-xs-1" ng-include="'views/nav.html'" ng-controller="StatusCtrl"></nav>
+	<!-- wrapper for the app; contains ng-view -->
 	<div class="wrapper col-xs-11 col-xs-offset-1">
+		<!-- this will bring in any templates related to the task at hand -->
 		<main ng-view></main>
 	</div>
 

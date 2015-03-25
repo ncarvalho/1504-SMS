@@ -38,6 +38,7 @@ app.controller('RegisterCtrl', ['$scope', '$location', '$firebase', '$firebaseAu
 			$rootScope.currentUser = authData;
 			$location.path('/home');
 		}).catch(function(error) {
+			// console.log the error for troubleshooting
 			console.log(error);
 			$location.path('/login');
 		});
