@@ -2,6 +2,7 @@
 	<section class="login">
 		<h1>Log In</h1>
 		<form name="loginForm" class="col-xs-4" ng-submit="login()" novalidate>
+			<p class="error" ng-show="authError">{{ authError }}</p>
 			<div class="form-group">
 				<label class="col-xs-3">Email</label>
 				<div class="col-xs-9">	

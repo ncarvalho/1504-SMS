@@ -27,6 +27,11 @@ app.controller('RegisterCtrl', ['$scope', '$location', '$firebase', '$firebaseAu
 
 			$rootScope.currentUser = authData;
 			$location.path('/home');
+		}).catch(function(error) {
+			// console.log the error for troubleshooting
+			console.log(error);
+			$scope.authError = error.message;
+			$location.path('/register');
 		});
 	}
 	// login function to authenticate users trying to log in
@@ -40,6 +45,7 @@ app.controller('RegisterCtrl', ['$scope', '$location', '$firebase', '$firebaseAu
 		}).catch(function(error) {
 			// console.log the error for troubleshooting
 			console.log(error);
+			$scope.authError = error.message;
 			$location.path('/login');
 		});
 	}
