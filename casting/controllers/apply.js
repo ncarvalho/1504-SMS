@@ -6,9 +6,10 @@ app.controller('ApplyCtrl', ['$scope', '$firebase', '$location', function($scope
 	var sync = $firebase(ref);
 	// saving the array of applications to firebase
 	$scope.applications = sync.$asArray();
+	$scope.notes = sync.$asArray();
 	// apply function that accepts all the fields from the apply.html and saves into applications array
 	$scope.apply = function(e) {
-		$scope.applications.$add($scope.application)
+		$scope.applications.$add({$scope.application, $scope.notes})
 		.then(function(){
 			// after application is submitted, clear form and navigate to home
 			$scope.application = {};

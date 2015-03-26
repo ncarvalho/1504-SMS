@@ -1,4 +1,4 @@
-<h1 class="col-xs-12"><a href="/">Casting</a> <span ng-controller="StatusCtrl" ng-show="currentuser" class="user text-muted">Hi {{ currentuser.fname }}</span></h1>
+<h1 class="col-xs-12"><a href="/">Casting</a> <span style="float:right;" ng-controller="StatusCtrl" ng-show="currentuser" class="user text-muted">Hi {{ currentuser.fname }}</span></h1>
 <div class="col-xs-12">
 	<!-- currently displaying the first name of current user -->
 	
@@ -39,7 +39,7 @@
 		        <!-- message -->
 		        <span><h3>{{ message.from }}: </h3>{{ message.text }}</span>
 		        <!-- delete message if related to current user -->
-		        <button ng-click="messages.$remove(message)"><i class="fa fa-times-circle"></i></button>
+		        <button ng-hide="message.id != currentuser.$id" ng-click="messages.$remove(message)"><i class="fa fa-times-circle"></i></button>
 		        
 		      </li>
 		    </ul>
